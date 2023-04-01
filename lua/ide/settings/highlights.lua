@@ -5,28 +5,37 @@ if not status_ok then
     return
 end
 
+vim.api.nvim_set_hl(0, "Normal", { bg = colors.black })
+vim.api.nvim_set_hl(
+    0,
+    "NormalFloat",
+    { bg = colors.black }
+)
+vim.api.nvim_set_hl(
+    0,
+    "FloatBorder",
+    { fg = colors.grey2, bg = colors.black }
+)
 vim.api.nvim_set_hl(
     0,
     "WhichKeySeparator",
     { fg = colors.green_light }
 )
-vim.api.nvim_set_hl(
-    0,
-    "TelescopeNormal",
-    { fg = colors.green_light, bg = "#191d20" }
-)
-vim.api.nvim_set_hl(
-    0,
-    "TelescopeBorder",
-    { fg = colors.grey2, bg = "#191d20" }
-)
-vim.api.nvim_set_hl(
-    0,
-    "WhichKeyBorder",
-    { fg = colors.grey2, bg = "#191d20" }
-)
-vim.api.nvim_set_hl(
-    0,
-    "NotifyINFOBody",
-    { bg = "#191d20" }
-)
+vim.api.nvim_set_hl(0, "TelescopeNormal", {
+    fg = colors.green_light,
+})
+vim.api.nvim_set_hl(0, "TelescopeBorder", {
+    fg = colors.grey2,
+})
+vim.api.nvim_set_hl(0, "WhichKeyBorder", {
+    fg = colors.grey2,
+})
+vim.api.nvim_set_hl(0, "WhichKeyFloat", {
+    bg = colors.black,
+})
+vim.api.nvim_set_hl(0, "Pmenu", {
+    bg = colors.black,
+})
+vim.api.nvim_set_hl(0, "PmenuSel", {
+    bg = colors.grey0,
+})

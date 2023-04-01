@@ -207,23 +207,6 @@ lualine.setup({
                 cond = hide_in_width,
             },
             {
-                function()
-                    local row =
-                        vim.api.nvim_win_get_cursor(
-                            0
-                        )[1]
-                    local col =
-                        vim.api.nvim_win_get_cursor(
-                            0
-                        )[2]
-                    return " "
-                        .. row
-                        .. ":"
-                        .. col
-                        .. ""
-                end,
-            },
-            {
                 "filename",
                 file_status = true, -- (readonly status, modified status)
                 path = 0, -- 0: Just the filename
@@ -239,6 +222,19 @@ lualine.setup({
                     unnamed = "[No Name]",
                 },
                 cond = hide_in_width,
+            },
+            {
+                function()
+                    local row =
+                        vim.api.nvim_win_get_cursor(0)[1]
+                    local col =
+                        vim.api.nvim_win_get_cursor(0)[2]
+                    return " "
+                        .. row
+                        .. ":"
+                        .. col
+                        .. ""
+                end,
             },
         },
         lualine_x = {
@@ -335,20 +331,21 @@ lualine.setup({
                 fmt = function()
                     local progress = math.floor(
                         (
-                                vim.api.nvim_win_get_cursor(
-                                    0
-                                )[1]
-                                / vim.api.nvim_buf_line_count(
-                                    0
-                                )
-                                * 100
+                            vim.api.nvim_win_get_cursor(
+                                0
+                            )[1]
+                            / vim.api.nvim_buf_line_count(
+                                0
                             )
+                            * 100
+                        )
                     )
                     return tostring(
                         vim.api.nvim_win_get_cursor(0)[1]
                                     == 1
-                                and "Top"
-                            or progress == 100 and "Bot"
+                                and "TP"
+                            or progress == 100 and "BT"
+                            or progress < 10 and "0" .. progress
                             or progress
                     )
                 end,

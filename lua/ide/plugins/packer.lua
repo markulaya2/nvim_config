@@ -134,10 +134,6 @@ end
 local ui = function(use)
     use("rcarriga/nvim-notify")
     use("kyazdani42/nvim-tree.lua")
-    use({
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v2.x",
-    })
     use("folke/which-key.nvim")
     use("akinsho/toggleterm.nvim")
 
