@@ -1,5 +1,6 @@
-local status_ok, trouble = pcall(require, "trouble")
-if not status_ok then
+local ok, trouble = pcall(require, "trouble")
+if not ok then
+    vim.notify("error requiring trouble")
     return
 end
 
@@ -31,7 +32,7 @@ trouble.setup({
         close_folds = { "zM", "zm" }, -- close all folds
         open_folds = { "zR", "zr" }, -- open all folds
         toggle_fold = { "zA", "za" }, -- toggle fold of current file
-        previous = "k", -- preview item
+        previous = "k", -- previous item
         next = "j", -- next item
     },
     indent_lines = true, -- add an indent guide below the fold icons

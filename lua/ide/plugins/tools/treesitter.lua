@@ -1,13 +1,17 @@
-local status_ok, configs = pcall(
-    require,
-    "nvim-treesitter.configs"
-)
+local status_ok, configs =
+    pcall(require, "nvim-treesitter.configs")
 if not status_ok then
     return
 end
 
 configs.setup({
-    ensure_installed = { "c", "lua", "vim", "help", "query" },
+    ensure_installed = {
+        "c",
+        "lua",
+        "vim",
+        "vimdoc",
+        "query",
+    },
     auto_install = true,
     sync_install = false,
     ignore_install = { "phpdoc" }, -- List of parsers to ignore installing

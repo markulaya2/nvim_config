@@ -5,11 +5,15 @@ if not status_ok then
     return
 end
 
-vim.api.nvim_set_hl(0, "Normal", { bg = colors.black })
+vim.api.nvim_set_hl(
+    0,
+    "Normal",
+    { fg = colors.white, bg = colors.black }
+)
 vim.api.nvim_set_hl(
     0,
     "NormalFloat",
-    { bg = colors.black }
+    { fg = colors.white, bg = colors.black }
 )
 vim.api.nvim_set_hl(
     0,
@@ -31,11 +35,18 @@ vim.api.nvim_set_hl(0, "WhichKeyBorder", {
     fg = colors.grey2,
 })
 vim.api.nvim_set_hl(0, "WhichKeyFloat", {
+    fg = "#ff0000",
     bg = colors.black,
 })
 vim.api.nvim_set_hl(0, "Pmenu", {
+    fg = colors.white,
     bg = colors.black,
 })
 vim.api.nvim_set_hl(0, "PmenuSel", {
+    fg = colors.green_light,
     bg = colors.grey0,
+})
+vim.api.nvim_set_hl(0, "Tabline", {
+    fg = colors.white,
+    bg = colors.black,
 })

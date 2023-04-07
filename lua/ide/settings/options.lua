@@ -14,10 +14,9 @@ local options = {
     cursorline = true, -- highlight current line
     wrap = true, -- line wrapping
     whichwrap = "b,s,<,>,[,],h,l",
-    termguicolors = true, -- terminal gui colors
     showmode = false, -- hide show mode
     numberwidth = 2, -- set number column width
-    timeoutlen = 0, -- mapped sequence wait time
+    timeoutlen = 350, -- mapped sequence wait time
     conceallevel = 0, -- `` visible in MD files
     pumblend = 10, -- translucent popups
     winblend = 10, -- translucent floating windows
@@ -27,6 +26,7 @@ local options = {
     linebreak = true,
     breakindent = true,
     showbreak = "",
+    termguicolors = true,
 }
 
 -- add options to vim.opt
