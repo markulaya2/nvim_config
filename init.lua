@@ -1,2 +1,3 @@
-require("ide.plugins")
-require("ide.settings")
+require("ide.helpers")
+Prequire("ide.plugins")
+Prequire("ide.settings")

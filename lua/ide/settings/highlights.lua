@@ -1,9 +1,4 @@
-local status_ok, colors =
-    pcall(require, "ide.plugins.ui.colors")
-if not status_ok then
-    vim.notify("error in highlights.lua")
-    return
-end
+local colors = Prequire("ide.plugins.ui.colors")
 
 vim.api.nvim_set_hl(
     0,

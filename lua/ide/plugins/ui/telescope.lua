@@ -1,10 +1,4 @@
-local status_ok, telescope = pcall(
-    require,
-    "telescope"
-)
-if not status_ok then
-    return
-end
+local telescope = Prequire("telescope")
 
 telescope.load_extension("media_files")
 telescope.load_extension("file_browser")

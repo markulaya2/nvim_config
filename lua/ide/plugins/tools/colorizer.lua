@@ -1,8 +1,4 @@
-local status_ok, colorizer =
-    pcall(require, "colorizer")
-if not status_ok then
-    return
-end
+local colorizer = Prequire("colorizer")
 
 vim.opt["termguicolors"] = true -- terminal gui colors
 

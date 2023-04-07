@@ -1,9 +1,4 @@
-local status_ok, indent_blankline =
-    pcall(require, "indent_blankline")
-if not status_ok then
-    vim.notify("error in indentline")
-    return
-end
+local indent_blankline = Prequire("indent_blankline")
 
 local colors = require("ide.plugins.ui.colors")
 

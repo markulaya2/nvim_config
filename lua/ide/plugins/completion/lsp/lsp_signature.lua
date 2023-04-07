@@ -1,9 +1,4 @@
-local ok, lsp_signature =
-    pcall(require, "lsp_signature")
-if not ok then
-    vim.notify("error requiring lsp_signature")
-    return
-end
+local lsp_signature = Prequire("lsp_signature")
 
 lsp_signature.setup({
     debug = false, -- set to true to enable debug logging

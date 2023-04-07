@@ -1,10 +1,5 @@
 local colors = require("ide.plugins.ui.colors")
-local status_ok, toggleterm =
-    pcall(require, "toggleterm")
-if not status_ok then
-    vim.notify("error in toggleterm")
-    return
-end
+local toggleterm = Prequire("toggleterm")
 
 toggleterm.setup({
     size = 10,

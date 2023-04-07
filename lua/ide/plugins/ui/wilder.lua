@@ -1,7 +1,4 @@
-local status_ok, wilder = pcall(require, "wilder")
-if not status_ok then
-    return
-end
+local wilder = Prequire("wilder")
 
 wilder.setup({ modes = { ":", "/", "?" } })
 

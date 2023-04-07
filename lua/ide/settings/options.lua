@@ -27,6 +27,7 @@ local options = {
     breakindent = true,
     showbreak = "",
     termguicolors = true,
+    wildignore = "*/node_modules/*",
 }
 
 -- add options to vim.opt

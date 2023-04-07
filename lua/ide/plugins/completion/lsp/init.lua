@@ -1,7 +1,4 @@
-local status_ok, _ = pcall(require, "lspconfig")
-if not status_ok then
-    return
-end
+local _ = Prequire("lspconfig")
 
 require("ide.plugins.completion.lsp.mason")
 require("ide.plugins.completion.lsp.handlers").setup()

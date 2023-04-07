@@ -1,8 +1,4 @@
-local ok, trouble = pcall(require, "trouble")
-if not ok then
-    vim.notify("error requiring trouble")
-    return
-end
+local trouble = Prequire("trouble")
 
 trouble.setup({
     position = "bottom", -- position of the list can be: bottom, top, left, right

@@ -1,8 +1,4 @@
-local status_ok, lualine = pcall(require, "lualine")
-if not status_ok then
-    vim.notify("error in lualine")
-    return
-end
+local lualine = Prequire("lualine")
 
 local hide_in_width = function()
     return vim.fn.winwidth(0) > 80

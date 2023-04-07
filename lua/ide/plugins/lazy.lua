@@ -12,12 +12,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- require lazy with pcall to avoid error on first use
-local ok, lazy = pcall(require, "lazy")
-if not ok then
-    vim.notify("error in packer.lua")
-    return
-end
+-- require lazy with Prequire to avoid error on first use
+local lazy = Prequire("lazy")
 
 local merge = function(...)
     local result = {}

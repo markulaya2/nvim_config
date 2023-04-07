@@ -1,8 +1,4 @@
-local status_ok, which_key =
-    pcall(require, "which-key")
-if not status_ok then
-    return
-end
+local which_key = Prequire("which-key")
 
 local setup = {
     plugins = {
@@ -277,9 +273,28 @@ local mappings = {
             "<cmd>Telescope file_browser<cr>",
             "Explore",
         },
-        m = {
+        i = {
             "<cmd>Telescope media_files<cr>",
             "Media",
+        },
+        m = {
+            function()
+                local pattern =
+                    vim.fn.input("Search Pattern: ")
+
+                vim.api.nvim_command(
+                    "vimgrep " .. pattern .. " **/*"
+                )
+            end,
+            "Multiple",
+        },
+        n = {
+            "<cmd>cnext<cr>",
+            "cnext",
+        },
+        p = {
+            "<cmd>cprevious<cr>",
+            "cprev",
         },
     },
     t = {

@@ -1,8 +1,4 @@
-local status_ok, cursorline =
-    pcall(require, "nvim-cursorline")
-if not status_ok then
-    return
-end
+local cursorline = Prequire("nvim-cursorline")
 
 cursorline.setup({
     cursorline = {
