@@ -66,13 +66,13 @@ local tools = {
 
     -- comment
     "numToStr/Comment.nvim",
-    "JoosepAlviste/nvim-ts-context-commentstring",
+    -- "JoosepAlviste/nvim-ts-context-commentstring",
     "folke/todo-comments.nvim",
 
     -- misc
     "nacro90/numb.nvim",
     "ethanholz/nvim-lastplace",
-    "p00f/nvim-ts-rainbow",
+    -- "p00f/nvim-ts-rainbow",
     "yamatsum/nvim-cursorline",
     "norcalli/nvim-colorizer.lua",
     "lukas-reineke/indent-blankline.nvim",
@@ -96,7 +96,10 @@ local ui = {
     "akinsho/toggleterm.nvim",
 
     -- wilder
-    "gelguy/wilder.nvim",
+    {
+        "gelguy/wilder.nvim",
+        build = ":UpdateRemotePlugins",
+    },
     "nixprime/cpsm",
 
     -- telescope
@@ -137,5 +140,8 @@ lazy.setup(merge(dependencies, completion, tools, ui), {
     },
     ui = {
         border = "rounded",
+    },
+    rocks = {
+        enabled = false
     },
 })

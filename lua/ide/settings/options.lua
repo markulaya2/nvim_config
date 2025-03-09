@@ -41,7 +41,7 @@ local python3 = HOME
 
 -- vim.g options
 local g_options = {
-    python3_host_prog = python3,
+    -- python3_host_prog = python3,
     mapleader = " ",
     maplocalleader = " ",
 }
